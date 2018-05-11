@@ -22,22 +22,26 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Get started right away </h2>
+        <h2>Send Custom Event</h2>
         <p>
-            Clone your code repository and start developing your application on IDE of your choice
+            Press button to send custom event called <b>ShoppingCartCheckout</b>
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?linkid=862409">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="{{ url_for('track_custom_event') }}">Custom Event &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Continuous Delivery</h2>
-        <p>View your CI/CD pipeline on Visual Studio Team Services and customize it as per your needs</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?linkid=862410">Learn more &raquo;</a></p>
+        <h2>Send Custom Metric</h2>
+        <p>
+            Press button to send custom metric for <b>queueSize</b>
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('send_metric') }}">Custom Metric &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Azure DevOps Project</h2>
-        <p>Learn more about all you can do with Azure DevOps project by visiting the documentation</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?linkid=862126">Learn more &raquo;</a></p>
-    </div>
+        <h2>Trigger handled Exception</h2>
+        <p>
+            Press button to trigger a random handled exception
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('handledException') }}">Handled Exception &raquo;</a></p>
+    </div>    
 </div>
 
 {% endblock %}
